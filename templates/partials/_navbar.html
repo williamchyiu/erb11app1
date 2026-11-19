@@ -1,6 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-danger sticky-top">
   <div class="container">
-    <a class="navbar-brand" href="index.html">
+  {% comment %} index {% endcomment %}
+    <a class="navbar-brand" href={% url "pages:index" %}>
       <i class="fas fa-utensils"></i> Food Agent
     </a>
     <button
@@ -14,22 +15,25 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <ul class="navbar-nav">
         <li class="nav-item active mr-3">
-          <a class="nav-link" href="index.html">Home</a>
+        {% comment %} index {% endcomment %}
+          <a class="nav-link" href={% url "pages:index" %}>>Home</a>
         </li>
-        <li class="nav-item mr-3">
-          <a class="nav-link" href="listings.html">Restaurants</a>
+        {% comment %} listings {% endcomment %}
+          <a class="nav-link" href="{% url "pages:restaurant" %}>>Restaurants</a>
         </li>
-        <li class="nav-item mr-3">
-          <a class="nav-link" href="about.html">About</a>
+        {% comment %} about {% endcomment %}
+          <a class="nav-link" href={% url "pages:about" %}>About</a>
         </li>
       </ul>
       <ul class="navbar-nav ml-auto">
         <li class="nav-item mr-3">
+        {% comment %} register {% endcomment %}
           <a class="nav-link" href="register.html"
             ><i class="fas fa-user-plus"></i> Register</a
           >
         </li>
         <li class="nav-item">
+        {% comment %} login {% endcomment %}
           <a class="nav-link" href="login.html"
             ><i class="fas fa-sign-in-alt"></i> Login</a
           >
